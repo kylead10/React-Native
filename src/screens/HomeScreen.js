@@ -1,17 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
+  const MyName = 'Kayode';
   return (
     <View>
-      <Text style={{ fontSize: 30 }}>HomeScreen</Text>
-      <Button title="Layout" onPress={() => navigation.navigate('Layout')} />
+      <Text style={styles.text}>Getting started with React Native</Text>
+      <Text style={styles.name}>my name is {MyName}</Text>
     </View>
   );
 };
 
-HomeScreen.navigationOptions = {
-  title: 'Home'
-};
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 45,
+  },
+  name: {
+    fontSize: 20,
+  },
+});
 
 export default HomeScreen;
